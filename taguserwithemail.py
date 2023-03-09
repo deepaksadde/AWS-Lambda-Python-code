@@ -19,7 +19,6 @@ def lambda_handler(event, context):
     username = user['UserName']
     userdetails=iam_client.get_user(UserName=username)
     userdetails= userdetails['User']
-    #print(userdetails)
     if 'Tags' in userdetails.keys():
      tags= userdetails['Tags']
      print(tags)
